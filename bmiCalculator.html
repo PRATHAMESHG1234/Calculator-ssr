@@ -4,14 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>BMI Calculator</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px #888888;
+        margin-top: 50px;
+    }
+    
+    .heading {
+        color: #007bff;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    .input-field {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+    }
+    
+    .button {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+        background-color: #0056b3;
+    }
+    </style>
 </head>
 <body>
-    <h1> BMI Calculator</h1>
-    <form action="/bmiCalculator" method="post">
-        <input type="text" name="Weight" placeholder="Enter weight">
-        <input type="text" name="Height" placeholder="Enter height">
-        <button type="submit" name="submit">Calculate BMI</button>
-    </form>
+    <div class="container">
+        <h1 class="heading">BMI Calculator</h1>
+        <form action="/bmiCalculator" method="post" class="form-container">
+            <div class="input-group">
+                <label for="Weight">Weight (kg):</label>
+                <input type="text" id="Weight" name="Weight" placeholder="Enter weight" class="input-field">
+            </div>
+            <div class="input-group">
+                <label for="Height">Height (cm):</label>
+                <input type="text" id="Height" name="Height" placeholder="Enter height" class="input-field">
+            </div>
+            <button type="submit" name="submit" class="button">Calculate BMI</button>
+        </form>
+    </div>
 </body>
 </html>
